@@ -1,14 +1,8 @@
-# Use the Python3.7.2 image
-FROM python:3.8-slim-buster
-
-# Set the working directory to /app
+FROM python:3.8-slim
+RUN mkdir /app
 WORKDIR /app
-
-# Copy the current directory contents into the container at /app 
+ADD requirements.txt /app
+RUN pip3 install -r requirements.txt
 ADD . /app
-
-# Install the dependencies
-RUN pip install -r requirements.txt
-
-# run the command to start uWSGI
-CMD ["uwsgi", "app.ini"]
+EXPOSE 5000
+ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app.ics:app"]

@@ -2,9 +2,9 @@ from io import BytesIO
 
 from flask import Flask, send_file
 
-from hvc_ics.get_data import get_data
-from hvc_ics.make_ics import make_ics
+from app.get_data import *
 
+from app.make_ics import *
 
 app = Flask(__name__)
 
