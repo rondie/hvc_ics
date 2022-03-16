@@ -1,7 +1,7 @@
 from io import BytesIO
 
-from app.get_data import *
-from app.make_ics import *
+from app.get_data import get_hvc_data
+from app.make_ics import make_ics
 
 from flask import Flask, send_file
 
