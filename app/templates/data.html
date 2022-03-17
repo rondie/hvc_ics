@@ -1,0 +1,16 @@
+<html>
+<form action="/" method = "POST">
+    <p>Postal Code <input type = "text" name = "Postal Code" /></p>
+    <p>Streetnumber <input type = "text" name = "Streetnumber" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+{% if ophaaldata %}
+Output below will also appear in the ics <a href="{{request.url}}hvc-{{postalcode}}-{{streetnumber}}.ics">{{request.url}}hvc-{{postalcode}}-{{streetnumber}}.ics</a>
+ {% for data in ophaaldata %}
+  <hr>
+  {% for key,value in data.items() %}
+   <p> {{value}}</p>
+  {% endfor %}
+ {% endfor %}
+{% endif %}
+</html>
