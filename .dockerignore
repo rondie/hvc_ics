@@ -1,1 +1,5 @@
+.git
+.gitignore
+.github
 __pycache__/
+README.md
