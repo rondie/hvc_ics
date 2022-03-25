@@ -1,4 +1,4 @@
-FROM python:3.10.3-slim
+FROM python:3.10.4-slim
 ARG APPDIR="/home/app"
 ENV PATH="${APPDIR}/.local/bin:${PATH}"
 ENV HVC_ICS_UID=1000
