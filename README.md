@@ -10,7 +10,7 @@ Environment variables that can be set:
 | Name | default |
 | ---- | ------- |
 | HVC_ICS_HOST | 0.0.0.0 |
-| HVC_ICS_PORT | 80 |
+| HVC_ICS_PORT | 5000 |
 | HVC_ICS_WORKERS | 4 |
 | HVC_ICS_THREADS | 4 |
 | HVC_ICS_TIMEOUT | 120 |
