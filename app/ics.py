@@ -25,6 +25,6 @@ def calendar(postalcode, streetnumber):
     file = BytesIO(make_ics(ophaaldata))
     return send_file(
         file,
-        attachment_filename='hvc-' + postalcode + '-' + streetnumber + '.ics',
+        download_name='hvc-' + postalcode + '-' + streetnumber + '.ics',
         as_attachment=True)
     file.close
