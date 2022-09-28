@@ -60,4 +60,4 @@ def get_hvc_data(postalcode, streetnumber):
             'content': content,
             'link': afvalstroomLink
             })
-    return(ophaaldata)
+    return (ophaaldata)
